@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,82 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorldInSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXs-GM-GdT">
+                                <rect key="frame" x="10" y="35" width="355" height="96"/>
+                                <color key="backgroundColor" red="1" green="0.45404056396371451" blue="0.35093992994231038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="😱"/>
+                                <connections>
+                                    <action selector="showMessageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WcO-j0-lEu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-Z8-haG">
+                                <rect key="frame" x="10" y="141" width="355" height="96"/>
+                                <color key="backgroundColor" red="0.32106832749999997" green="0.66640099320000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="😇"/>
+                                <connections>
+                                    <action selector="showMessageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lx7-AQ-8aY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lm-rC-qNG">
+                                <rect key="frame" x="10" y="247" width="355" height="96"/>
+                                <color key="backgroundColor" red="0.34540365951003404" green="1" blue="0.23347438732500991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="🤩"/>
+                                <connections>
+                                    <action selector="showMessageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y0u-Po-fsQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2r-et-4iz">
+                                <rect key="frame" x="10" y="353" width="355" height="96"/>
+                                <color key="backgroundColor" red="0.94086020713540297" green="1" blue="0.23742134923303382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="🤠"/>
+                                <connections>
+                                    <action selector="showMessageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwy-Nj-Pe3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to AutoLayout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11I-RU-3uW">
+                                <rect key="frame" x="155" y="626" width="182" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aYW-Z8-haG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="1MU-Zz-xdB"/>
+                            <constraint firstItem="aYW-Z8-haG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8pU-WX-RYp"/>
+                            <constraint firstItem="WXs-GM-GdT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Chg-Rq-kX7"/>
+                            <constraint firstItem="I2r-et-4iz" firstAttribute="top" secondItem="9Lm-rC-qNG" secondAttribute="bottom" constant="10" id="DyG-IP-HwK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WXs-GM-GdT" secondAttribute="trailing" constant="10" id="GeO-TA-sVe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="11I-RU-3uW" secondAttribute="bottom" constant="20" id="I0a-Ff-Zm5"/>
+                            <constraint firstItem="WXs-GM-GdT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Keg-tu-DuA"/>
+                            <constraint firstItem="11I-RU-3uW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="MsG-DN-frA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="11I-RU-3uW" secondAttribute="trailing" constant="38" id="Nia-Pv-PQD"/>
+                            <constraint firstItem="9Lm-rC-qNG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SPN-il-cJQ"/>
+                            <constraint firstItem="I2r-et-4iz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WQK-Iu-E3l"/>
+                            <constraint firstItem="9Lm-rC-qNG" firstAttribute="top" secondItem="aYW-Z8-haG" secondAttribute="bottom" constant="10" id="adp-1J-hca"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aYW-Z8-haG" secondAttribute="trailing" constant="10" id="dnb-P3-Rcb"/>
+                            <constraint firstItem="I2r-et-4iz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="gfV-ix-xwW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Lm-rC-qNG" secondAttribute="trailing" constant="10" id="hme-7h-TCQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I2r-et-4iz" secondAttribute="trailing" constant="10" id="mph-Z7-735"/>
+                            <constraint firstItem="9Lm-rC-qNG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nQt-CA-LT9"/>
+                            <constraint firstItem="WXs-GM-GdT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xnr-89-eAW"/>
+                            <constraint firstItem="aYW-Z8-haG" firstAttribute="top" secondItem="WXs-GM-GdT" secondAttribute="bottom" constant="10" id="zpV-0j-IaQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4" y="45.42728635682159"/>
         </scene>
     </scenes>
 </document>

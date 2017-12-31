@@ -19,6 +19,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func showMessage(sender: UIButton) {
+        let emoji = sender.titleLabel?.text
+        
+        let alertControler = UIAlertController(title: "Hello World", message: "Yes, you clicked \(emoji ?? "unknown")", preferredStyle: UIAlertControllerStyle.alert)
+        alertControler.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        present(alertControler, animated: true, completion: nil)
+    }
 
 
 }
